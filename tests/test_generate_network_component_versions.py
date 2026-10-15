@@ -41,7 +41,6 @@ def dashboard_snapshot(*, generated_at: str, splice_version: str) -> dict:
             "endpoint": f"scan.{network_key}.example",
             "cantonVersion": "3.5.1",
             "cantonReleaseLineBranch": "release-line-0.6",
-            "darVersions": [],
         }
 
     return {
@@ -54,7 +53,10 @@ def dashboard_snapshot(*, generated_at: str, splice_version: str) -> dict:
             "devnet": "3.5.3",
         },
         "latestDpm": "1.0.21",
-        "latestPqs": "3.5.1",
+        "pqsVersions": {
+            network_key: {"releaseLineTag": "3.5", "version": "3.5.1"}
+            for network_key in ["mainnet", "testnet", "devnet"]
+        },
         "latestWalletGateway": "1.4.0",
         "npmVersions": {
             "tokenStandard": "1.4.0",
@@ -255,7 +257,6 @@ def test_network_snapshot_from_existing_rebuilds_required_fields() -> None:
                     "infoUrl": "https://docs.dev.example/info",
                     "indexUrl": "https://docs.dev.example/index.html",
                     "cantonSourcesUrl": "https://github.com/example/canton-sources",
-                    "darVersionsUrl": "https://github.com/example/dars.lock",
                 }
             }
         },
@@ -265,7 +266,6 @@ def test_network_snapshot_from_existing_rebuilds_required_fields() -> None:
                 "endpoint": "scan.dev.example",
                 "advanced": {
                     "migrationId": "1",
-                    "darVersions": [{"name": "splice-amulet", "version": "0.1.22"}],
                 },
                 "substitutions": {"version": "0.6.14"},
             }
@@ -307,19 +307,19 @@ def test_collect_snapshot_preserves_previous_network_on_failure(monkeypatch) -> 
             "mainnet": {
                 "name": "MainNet",
                 "endpoint": "scan.main.example",
-                "advanced": {"migrationId": "4", "darVersions": []},
+                "advanced": {"migrationId": "4"},
                 "substitutions": {"version": "0.6.12"},
             },
             "testnet": {
                 "name": "TestNet",
                 "endpoint": "scan.test.example",
-                "advanced": {"migrationId": "1", "darVersions": []},
+                "advanced": {"migrationId": "1"},
                 "substitutions": {"version": "0.6.13"},
             },
             "devnet": {
                 "name": "DevNet",
                 "endpoint": "scan.dev.example",
-                "advanced": {"migrationId": "1", "darVersions": []},
+                "advanced": {"migrationId": "1"},
                 "substitutions": {"version": "0.6.14"},
             },
         },
@@ -360,13 +360,11 @@ def test_collect_snapshot_preserves_previous_network_on_failure(monkeypatch) -> 
             "spliceVersion": existing_config["versions"][network_key]["substitutions"]["version"],
             "cantonVersion": "3.5.1",
             "cantonReleaseLineBranch": "release-line-x",
-            "darVersions": [],
             "migrationId": existing_config["versions"][network_key]["advanced"]["migrationId"],
             "sources": {
                 "infoUrl": f"https://docs.{network_key}.example/info",
                 "indexUrl": f"https://docs.{network_key}.example/index.html",
                 "cantonSourcesUrl": "",
-                "darVersionsUrl": "",
             },
             "checks": {
                 "dockerImageTag": existing_config["versions"][network_key]["substitutions"][
@@ -379,7 +377,14 @@ def test_collect_snapshot_preserves_previous_network_on_failure(monkeypatch) -> 
         }
 
     monkeypatch.setattr(module, "collect_network_snapshot", fake_collect_network_snapshot)
-    monkeypatch.setattr(module, "previous_stable_pqs_version", lambda existing_config: "3.5.1")
+    monkeypatch.setattr(
+        module,
+        "collect_pqs_versions",
+        lambda timeout, existing_config, networks: {
+            network_key: {"releaseLineTag": "3.5", "version": "3.5.1"}
+            for network_key in networks
+        },
+    )
     monkeypatch.setattr(
         module,
         "collect_daml_sdk_versions",
@@ -390,11 +395,6 @@ def test_collect_snapshot_preserves_previous_network_on_failure(monkeypatch) -> 
         },
     )
     monkeypatch.setattr(module, "fetch_latest_dpm_version", lambda timeout: "1.0.21")
-    monkeypatch.setattr(
-        module,
-        "fetch_pqs_version_from_scribe_component",
-        lambda timeout, previous_stable_version=None: "3.5.1",
-    )
     monkeypatch.setattr(module, "fetch_latest_wallet_gateway_version", lambda timeout: "1.4.0")
     monkeypatch.setattr(module, "fetch_npm_latest", lambda package_name, timeout: "1.0.0")
 
@@ -414,7 +414,14 @@ def test_collect_snapshot_raises_when_failed_network_has_no_previous(monkeypatch
         raise RuntimeError(f"{network_key} boom")
 
     monkeypatch.setattr(module, "collect_network_snapshot", fake_collect_network_snapshot)
-    monkeypatch.setattr(module, "previous_stable_pqs_version", lambda existing_config: "3.5.1")
+    monkeypatch.setattr(
+        module,
+        "collect_pqs_versions",
+        lambda timeout, existing_config, networks: {
+            network_key: {"releaseLineTag": "3.5", "version": "3.5.1"}
+            for network_key in networks
+        },
+    )
 
     with pytest.raises(RuntimeError, match="no previous dashboard config"):
         module.collect_snapshot(timeout=1.0, existing_config={"versions": {}, "repositories": {}})
@@ -548,32 +555,165 @@ def test_build_config_records_network_daml_sdk_manifest_sources() -> None:
     ]
 
 
-def test_previous_stable_pqs_version_uses_existing_dashboard_config() -> None:
+def test_previous_stable_pqs_version_prefers_the_networks_own_value() -> None:
     module = load_script_module()
-
-    assert (
-        module.previous_stable_pqs_version(
-            {
-                "repositories": {
-                    "pqs": {
-                        "versionMapping": {
-                            "mainnet": {"externalVersion": "3.5.1"},
-                            "testnet": {"externalVersion": "3.5.2"},
-                            "devnet": {"externalVersion": "3.5.2-rc1"},
-                        }
-                    }
+    existing_config = {
+        "repositories": {
+            "pqs": {
+                "versionMapping": {
+                    "mainnet": {"externalVersion": "3.5.1"},
+                    "testnet": {"externalVersion": "3.6.0"},
+                    "devnet": {"externalVersion": "3.6.1-rc1"},
                 }
             }
+        }
+    }
+
+    assert module.previous_stable_pqs_version(existing_config, "mainnet") == "3.5.1"
+    assert module.previous_stable_pqs_version(existing_config, "testnet") == "3.6.0"
+    # No stable value of its own: fall back to the newest stable value on any network.
+    assert module.previous_stable_pqs_version(existing_config, "devnet") == "3.6.0"
+    assert module.previous_stable_pqs_version({"repositories": {}}, "mainnet") == ""
+
+
+def test_scribe_release_line_tag_uses_canton_major_minor() -> None:
+    module = load_script_module()
+
+    assert module.scribe_release_line_tag("3.5.12") == "3.5"
+    assert module.scribe_release_line_tag("3.6.0") == "3.6"
+    assert module.scribe_release_line_tag("3.7.0-rc1") == "3.7"
+    assert module.scribe_release_line_tag("3.7.0-snapshot.20261010.18000.0.vabcdef12") == "3.7"
+    assert module.scribe_release_line_tag("4.0.0") == "4.0"
+    assert module.scribe_release_line_tag("10.12.3") == "10.12"
+    for bad_version in ["", "4", "main", "v3.6.0"]:
+        with pytest.raises(RuntimeError, match="Cannot derive Scribe release-line tag"):
+            module.scribe_release_line_tag(bad_version)
+
+
+def test_collect_pqs_versions_uses_each_network_canton_release_line(monkeypatch) -> None:
+    module = load_script_module()
+    networks = {
+        "mainnet": {"cantonVersion": "3.5.12"},
+        "testnet": {"cantonVersion": "3.6.0"},
+        "devnet": {"cantonVersion": "3.6.0"},
+    }
+    tag_versions = {"3.5": "3.5.8", "3.6": "3.6.0"}
+    seen_urls: list[str] = []
+
+    def fake_fetch_manifest_json(url: str, timeout: float) -> dict:
+        seen_urls.append(url)
+        tag = url.rsplit("/", 1)[-1]
+        return {"annotations": {"org.opencontainers.image.version": tag_versions[tag]}}
+
+    monkeypatch.setattr(module, "fetch_manifest_json", fake_fetch_manifest_json)
+
+    assert module.collect_pqs_versions(1.0, {"repositories": {}}, networks) == {
+        "mainnet": {"releaseLineTag": "3.5", "version": "3.5.8"},
+        "testnet": {"releaseLineTag": "3.6", "version": "3.6.0"},
+        "devnet": {"releaseLineTag": "3.6", "version": "3.6.0"},
+    }
+    assert seen_urls == [
+        module.pqs_scribe_manifest_url("3.5"),
+        module.pqs_scribe_manifest_url("3.6"),
+        module.pqs_scribe_manifest_url("3.6"),
+    ]
+
+
+def test_collect_pqs_versions_preserves_only_failed_network_value(monkeypatch) -> None:
+    module = load_script_module()
+    existing_config = {
+        "repositories": {
+            "pqs": {
+                "versionMapping": {
+                    "mainnet": {"externalVersion": "3.5.8"},
+                    "testnet": {"externalVersion": "3.5.8"},
+                    "devnet": {"externalVersion": "3.5.8"},
+                }
+            }
+        }
+    }
+    networks = {
+        "mainnet": {"cantonVersion": "3.5.12"},
+        "testnet": {"cantonVersion": "3.7.0"},
+        "devnet": {"cantonVersion": "3.6.0"},
+    }
+
+    def fake_fetch_manifest_json(url: str, timeout: float) -> dict:
+        tag = url.rsplit("/", 1)[-1]
+        if tag == "3.7":
+            raise RuntimeError("manifest unknown")
+        return {"annotations": {"org.opencontainers.image.version": {"3.5": "3.5.9", "3.6": "3.6.0"}[tag]}}
+
+    monkeypatch.setattr(module, "fetch_manifest_json", fake_fetch_manifest_json)
+
+    assert module.collect_pqs_versions(1.0, existing_config, networks) == {
+        "mainnet": {"releaseLineTag": "3.5", "version": "3.5.9"},
+        "testnet": {"releaseLineTag": "3.5", "version": "3.5.8"},
+        "devnet": {"releaseLineTag": "3.6", "version": "3.6.0"},
+    }
+
+
+def test_collect_pqs_versions_keeps_values_until_new_release_lines_are_published(
+    monkeypatch,
+) -> None:
+    module = load_script_module()
+    existing_config = {
+        "repositories": {
+            "pqs": {
+                "versionMapping": {
+                    "mainnet": {"externalVersion": "3.6.0"},
+                    "testnet": {"externalVersion": "3.6.0"},
+                    "devnet": {"externalVersion": "3.6.0"},
+                }
+            }
+        }
+    }
+    networks = {
+        "mainnet": {"cantonVersion": "3.6.4"},
+        "testnet": {"cantonVersion": "3.7.0"},
+        "devnet": {"cantonVersion": "4.0.0-snapshot.20270101.1.0.vabcdef12"},
+    }
+    seen_tags: list[str] = []
+
+    def fake_fetch_manifest_json(url: str, timeout: float) -> dict:
+        tag = url.rsplit("/", 1)[-1]
+        seen_tags.append(tag)
+        if tag != "3.6":
+            raise RuntimeError(f"HTTP Error 404: manifest unknown for {tag}")
+        return {"annotations": {"org.opencontainers.image.version": "3.6.2"}}
+
+    monkeypatch.setattr(module, "fetch_manifest_json", fake_fetch_manifest_json)
+
+    assert module.collect_pqs_versions(1.0, existing_config, networks) == {
+        "mainnet": {"releaseLineTag": "3.6", "version": "3.6.2"},
+        "testnet": {"releaseLineTag": "3.6", "version": "3.6.0"},
+        "devnet": {"releaseLineTag": "3.6", "version": "3.6.0"},
+    }
+    # Each new line is still attempted every run, so it is picked up once published.
+    assert seen_tags == ["3.6", "3.7", "4.0"]
+
+
+def test_collect_pqs_versions_raises_when_failed_network_has_no_previous(monkeypatch) -> None:
+    module = load_script_module()
+
+    def fake_fetch_manifest_json(url: str, timeout: float) -> dict:
+        raise RuntimeError("manifest unknown")
+
+    monkeypatch.setattr(module, "fetch_manifest_json", fake_fetch_manifest_json)
+
+    with pytest.raises(RuntimeError, match="mainnet: failed to collect PQS version"):
+        module.collect_pqs_versions(
+            1.0,
+            {"repositories": {}},
+            {network_key: {"cantonVersion": "3.6.0"} for network_key in module.NETWORK_ORDER},
         )
-        == "3.5.2"
-    )
 
 
 def test_fetch_pqs_version_from_scribe_component_uses_stable_annotation(monkeypatch) -> None:
     module = load_script_module()
 
     def fake_fetch_manifest_json(url: str, timeout: float) -> dict:
-        assert url == module.PQS_SCRIBE_MANIFEST_URL
+        assert url == module.pqs_scribe_manifest_url("3.5")
         return {
             "annotations": {
                 "org.opencontainers.image.version": "3.5.3",
@@ -585,6 +725,7 @@ def test_fetch_pqs_version_from_scribe_component_uses_stable_annotation(monkeypa
 
     assert (
         module.fetch_pqs_version_from_scribe_component(
+            "3.5",
             timeout=1.0,
             previous_stable_version="3.5.2",
         )
@@ -598,7 +739,7 @@ def test_fetch_pqs_version_from_scribe_component_keeps_previous_stable_for_prere
     module = load_script_module()
 
     def fake_fetch_manifest_json(url: str, timeout: float) -> dict:
-        assert url == module.PQS_SCRIBE_MANIFEST_URL
+        assert url == module.pqs_scribe_manifest_url("3.5")
         return {
             "annotations": {
                 "org.opencontainers.image.version": "3.5.3-rc2",
@@ -610,11 +751,18 @@ def test_fetch_pqs_version_from_scribe_component_keeps_previous_stable_for_prere
 
     assert (
         module.fetch_pqs_version_from_scribe_component(
+            "3.5",
             timeout=1.0,
             previous_stable_version="3.5.2",
         )
         == "3.5.2"
     )
+    with pytest.raises(RuntimeError, match="no previous stable dashboard value"):
+        module.fetch_pqs_version_from_scribe_component(
+            "3.5",
+            timeout=1.0,
+            previous_stable_version="",
+        )
 
 
 def test_build_config_records_pqs_scribe_component_source() -> None:
@@ -634,12 +782,10 @@ def test_build_config_records_pqs_scribe_component_source() -> None:
     assert config["repositories"]["pqs"]["versionMapping"]["mainnet"] == {
         "branch": "",
         "externalVersion": "3.5.1",
-        "folderPathRepo": (
-            f"{module.PQS_SCRIBE_COMPONENT_REPOSITORY}:"
-            f"{module.PQS_SCRIBE_RELEASE_LINE_TAG}"
-        ),
+        "folderPathRepo": f"{module.PQS_SCRIBE_COMPONENT_REPOSITORY}:3.5",
     }
     assert "org.opencontainers.image.version" in config["_generated"]["sourceContract"]["pqs"]
+    assert "Canton version" in config["_generated"]["sourceContract"]["pqs"]
 
 
 def test_request_headers_use_github_token_for_github_api(monkeypatch) -> None:
@@ -683,21 +829,3 @@ def test_fetch_latest_wallet_gateway_version_paginates_releases(monkeypatch) -> 
         f"{module.WALLET_GATEWAY_RELEASES_URL}?per_page=100&page=2",
         f"{module.WALLET_GATEWAY_RELEASES_URL}?per_page=100&page=3",
     ]
-
-
-def test_parse_dars_lock_selects_latest_dashboard_packages_only() -> None:
-    module = load_script_module()
-    dars_lock = """
-splice-amulet 0.1.17 abc
-splice-amulet 0.1.18 def
-splice-wallet 0.1.19 abc
-splice-dso-governance 0.1.23 abc
-splice-dso-governance 0.1.24 def
-unrelated-package 9.9.9 abc
-"""
-
-    assert module.parse_dars_lock(dars_lock, "test-lock") == {
-        "splice-amulet": "0.1.18",
-        "splice-wallet": "0.1.19",
-        "splice-dso-governance": "0.1.24",
-    }
