@@ -48,7 +48,7 @@ Look into logs for activity indicators:
 
 - ledger [keep-alives](#there-is-a-suspicion-that-pqs-is-stalled) are present
 
-- watermark advances in the presence of expected ledger traffic, see also [here](#don-t-see-expected-templates-in-pqs) and [here](#no-data-for-a-recently-onboarded-party)
+- watermark advances in the presence of expected ledger traffic, see also [here](#don%E2%80%99t-see-expected-templates-in-pqs) and [here](#no-data-for-a-recently-onboarded-party)
 
 - retry loop indicates [recoverable errors](/sdks-tools/development-tools/pqs/operate#retries) (both upstream and downstream), examine message for
   indication of underlying cause
@@ -58,15 +58,15 @@ Look into logs for activity indicators:
 Look into [metrics](#which-metrics-are-available-how-to-integrate-them) for detailed breakdown of PQS
 internals:
 
-- correlate [transactions](#throughput-transactions-and-events)
-  (`pipeline_events_total{type="transaction"}`) and [watermark](#throughput-watermark-history)
+- correlate [transactions](#throughput-%3E-transactions-and-events)
+  (`pipeline_events_total{type="transaction"}`) and [watermark](#throughput-%3E-watermark-history)
   (`watermark_ix`) throughput metrics to identify if any slowdowns are present in the PQS pipeline
 
 - get an idea of PQS pipeline introduced latency - see
-  [here](#latency-total-transaction-handling-latency)
+  [here](#latency-%3E-total-transaction-handling-latency)
 
 - get an idea of contract churn (which correlates with write activity of PQS) by template - see
-  [here](#contracts-churn)
+  [here](#contracts-%3E-churn)
 
 Look into database to get familiar with Daml model footprint:
 
@@ -75,7 +75,7 @@ Look into database to get familiar with Daml model footprint:
 
 Look into database statistics for resource utilisation
 
-- get an idea of I/O split - [disk vs index](#statistics-on-disk-vs-index-i-o), cache sizing
+- get an idea of I/O split - [disk vs index](#statistics-on-disk-vs-index-i%2Fo), cache sizing
   ([tables](#table-data-in-cache-per-table)
   and [indexes](#index-data-in-cache-per-table))
 
@@ -116,7 +116,7 @@ Check if the argument supplied is applied and quoted in the configuration banner
 For example,
 
 ```text
-$ ./scribe.jar pipeline ledger postgres-document --source-ledger-host 10.0.0.0
+$ ./pqs.jar pipeline ledger postgres-document --source-ledger-host 10.0.0.0
 ```
 
 should result in the following banner being displayed in the logs:
@@ -155,7 +155,7 @@ You should at least see this line repeated every 40 seconds, even if there is no
 ```
 
 If you expect data to flow, then check your filter configuration so that it’s not too restrictive (see
-[Don’t see expected templates in PQS](#don-t-see-expected-templates-in-pqs)).
+[Don’t see expected templates in PQS](#don%E2%80%99t-see-expected-templates-in-pqs)).
 
 If all else fails, get your hands on a thread dump (for example, through [diagnostics](/sdks-tools/development-tools/pqs/operate#diagnostics)) and
 analyse it for any deadlocks.
@@ -226,7 +226,7 @@ You might want to re-visit the configuration
 To prevent excessive output from Netty when the logging level is set to `DEBUG`, use the following arguments:
 
 ```text
-$ ./scribe.jar pipeline \
+$ ./pqs.jar pipeline \
      --logger-level=Debug \
      --logger-mappings-io.netty=Info \
      --logger-mappings-io.grpc.netty=Info
@@ -250,7 +250,7 @@ the active PQS pipeline.
 If a new party was onboarded without stopping the PQS pipeline, it is best to either:
 
 - purge the PQS database and re-ingest the data either from `Genesis` or from `Latest`
-  (see [Ledger streaming & recovery](/sdks-tools/development-tools/pqs/operate#ledger-streaming-recovery)), or
+  (see [Ledger streaming & recovery](/sdks-tools/development-tools/pqs/operate#ledger-streaming-%26-recovery)), or
 
 - perform a reset from a particular offset (before the offset of the first event with the new party involved) by
   following the [instructions](/sdks-tools/development-tools/pqs/operate#resetting)
@@ -259,7 +259,7 @@ The list of parties in the current pipeline session is output in the logs on sta
 
 ```text
 15:01:40.872 I [zio-fiber-950510203] com.digitalasset.zio.daml.ledgerapi.PartiesService:61 2 known parties retrieved
-15:01:40.876 I [zio-fiber-950510203] com.digitalasset.scribe.pipeline.pipeline.Impl:39 Starting pipeline on behalf of 'Alice::12209adab9c5e9d672d7b4515e26f4cd296cc2ec99bdb9787be7e804c49ca52f2686,Bob::12209adab9c5e9d672d7b4515e26f4cd296cc2ec99bdb9787be7e804c49ca52f2686'
+15:01:40.876 I [zio-fiber-950510203] com.digitalasset.pqs.pipeline.pipeline.Impl:39 Starting pipeline on behalf of 'Alice::12209adab9c5e9d672d7b4515e26f4cd296cc2ec99bdb9787be7e804c49ca52f2686,Bob::12209adab9c5e9d672d7b4515e26f4cd296cc2ec99bdb9787be7e804c49ca52f2686'
 ```
 
 ### PQS complains it cannot start due to various offset mismatches
@@ -269,21 +269,21 @@ other factors). Please, refer to these 2 sections for additional insights:
 
 - [History slicing](/sdks-tools/development-tools/pqs/operate#history-slicing)
 
-- [Ledger streaming & recovery](/sdks-tools/development-tools/pqs/operate#ledger-streaming-recovery)
+- [Ledger streaming & recovery](/sdks-tools/development-tools/pqs/operate#ledger-streaming-%26-recovery)
 
 In most likelihood, under normal conditions, PQS should be launched with the following arguments, unless there is a
 strong reason to modify them:
 
 ```text
-$ ./scribe.jar pipeline --pipeline-ledger-start=Oldest --pipeline-ledger-stop=Never
+$ ./pqs.jar pipeline --pipeline-ledger-start=Oldest --pipeline-ledger-stop=Never
 ```
 
 Please, refer to the logs for the steps of determination, which offset is being selected to start the pipeline
 
 ```text
 15:28:12.778 I [zio-fiber-1984883840] com.digitalasset.zio.daml.ledgerapi.StateService:79 Retrieved ledger end offset: 00000000000000000f
-15:28:12.809 I [zio-fiber-1984883840] com.digitalasset.scribe.pipeline.pipeline.Impl:91 Last known checkpoint is at offset '00000000000000000f' and index '9'
-15:28:12.811 I [zio-fiber-1984883840] com.digitalasset.scribe.pipeline.pipeline.Impl:100 Continuing from offset '00000000000000000f' and index '9' until offset 'INFINITY'
+15:28:12.809 I [zio-fiber-1984883840] com.digitalasset.pqs.pipeline.pipeline.Impl:91 Last known checkpoint is at offset '00000000000000000f' and index '9'
+15:28:12.811 I [zio-fiber-1984883840] com.digitalasset.pqs.pipeline.pipeline.Impl:100 Continuing from offset '00000000000000000f' and index '9' until offset 'INFINITY'
 ```
 
 ### Is it safe to restart PQS? Can data get corrupted?
@@ -379,7 +379,7 @@ PQS [Dashboard](/sdks-tools/development-tools/pqs/operate#grafana-dashboard) is 
 general to more specific, so it is good practice to scan through the dashboard as it goes and spot anomalies along
 the flow.
 
-{/* DIVERGENCE: the metric names used on this page (`pipeline_events_total`, `watermark_ix`, and the other `pipeline_*` series) were verified as current against the Grafana dashboards shipped with scribe 3.5.1 (grafana/v9.4.0, v10.4.0, v11.0.0) and the PQS metrics table on the Operate page. Some panel names below (`Throughput > Throughputs`, `Throughput > Ingested counts`, `Queue sizes`) and the April 2025 screenshots predate the panel layout in the currently shipped dashboard JSON; the Note below flags this for readers. */}
+{/* DIVERGENCE: the metric names used on this page (`pipeline_events_total`, `watermark_ix`, and the other `pipeline_*` series) were verified as current against the Grafana dashboards shipped with PQS 3.5.1 (grafana/v9.4.0, v10.4.0, v11.0.0) and the PQS metrics table on the Operate page. Some panel names below (`Throughput > Throughputs`, `Throughput > Ingested counts`, `Queue sizes`) and the April 2025 screenshots predate the panel layout in the currently shipped dashboard JSON; the Note below flags this for readers. */}
 
 <Note>
 The panel names and screenshots in this section were captured from an earlier revision of the vendor-supplied Grafana dashboard. The panel titles and grouping in the dashboard you import may differ; the metrics and the way to read them are unchanged.

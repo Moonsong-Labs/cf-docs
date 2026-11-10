@@ -69,34 +69,34 @@ title: "GetActiveContracts"
 ## Protocol Details
 
 
-<dl class="x2mdx-ref-meta-grid">
+<div class="x2mdx-ref-meta-grid">
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Protocol</dt>
-    <dd>gRPC</dd>
+    <span class="x2mdx-ref-meta-label">Protocol</span>
+    <span class="x2mdx-ref-meta-value">gRPC</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Service</dt>
-    <dd>StateService</dd>
+    <span class="x2mdx-ref-meta-label">Service</span>
+    <span class="x2mdx-ref-meta-value">StateService</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>RPC</dt>
-    <dd>GetActiveContracts</dd>
+    <span class="x2mdx-ref-meta-label">RPC</span>
+    <span class="x2mdx-ref-meta-value">GetActiveContracts</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Client stream</dt>
-    <dd>No</dd>
+    <span class="x2mdx-ref-meta-label">Client stream</span>
+    <span class="x2mdx-ref-meta-value">No</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Server stream</dt>
-    <dd>Yes</dd>
+    <span class="x2mdx-ref-meta-label">Server stream</span>
+    <span class="x2mdx-ref-meta-value">Yes</span>
   </div>
 
-</dl>
+</div>
 
 
 ## Inputs
@@ -111,19 +111,19 @@ title: "GetActiveContracts"
 
 
 
-<dl class="x2mdx-ref-meta-grid">
+<div class="x2mdx-ref-meta-grid">
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Message</dt>
-    <dd>com.daml.ledger.api.v2.GetActiveContractsRequest</dd>
+    <span class="x2mdx-ref-meta-label">Message</span>
+    <span class="x2mdx-ref-meta-value">com.daml.ledger.api.v2.GetActiveContractsRequest</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Client stream</dt>
-    <dd>No</dd>
+    <span class="x2mdx-ref-meta-label">Client stream</span>
+    <span class="x2mdx-ref-meta-value">No</span>
   </div>
 
-</dl>
+</div>
 
 
 
@@ -159,6 +159,15 @@ title: "GetActiveContracts"
 
   </div>
 
+  <div class="x2mdx-ref-field-row">
+    <div class="x2mdx-ref-field-main">
+      <code class="x2mdx-ref-field-name">include_incomplete_reassignments</code>
+      <span class="x2mdx-ref-type-badge">bool</span>
+
+    </div>
+
+  </div>
+
 </div>
 
 
@@ -183,19 +192,19 @@ title: "GetActiveContracts"
 
 
 
-<dl class="x2mdx-ref-meta-grid">
+<div class="x2mdx-ref-meta-grid">
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Message</dt>
-    <dd>com.daml.ledger.api.v2.GetActiveContractsResponse</dd>
+    <span class="x2mdx-ref-meta-label">Message</span>
+    <span class="x2mdx-ref-meta-value">com.daml.ledger.api.v2.GetActiveContractsResponse</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Server stream</dt>
-    <dd>Yes</dd>
+    <span class="x2mdx-ref-meta-label">Server stream</span>
+    <span class="x2mdx-ref-meta-value">Yes</span>
   </div>
 
-</dl>
+</div>
 
 
 
@@ -299,6 +308,15 @@ title: "GetActiveContracts"
     <div class="x2mdx-ref-field-main">
       <code class="x2mdx-ref-field-name">stream_continuation_token</code>
       <span class="x2mdx-ref-type-badge">bytes</span>
+
+    </div>
+
+  </div>
+
+  <div class="x2mdx-ref-field-row">
+    <div class="x2mdx-ref-field-main">
+      <code class="x2mdx-ref-field-name">include_incomplete_reassignments</code>
+      <span class="x2mdx-ref-type-badge">bool</span>
 
     </div>
 
@@ -1628,7 +1646,8 @@ grpcurl \
     },
     "verbose": true
   },
-  "streamContinuationToken": "BASE64_ENCODED_BYTES"
+  "streamContinuationToken": "BASE64_ENCODED_BYTES",
+  "includeIncompleteReassignments": true
 }
 EOF
 ```

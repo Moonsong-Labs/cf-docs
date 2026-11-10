@@ -69,34 +69,34 @@ title: "SubmitAndWaitForReassignment"
 ## Protocol Details
 
 
-<dl class="x2mdx-ref-meta-grid">
+<div class="x2mdx-ref-meta-grid">
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Protocol</dt>
-    <dd>gRPC</dd>
+    <span class="x2mdx-ref-meta-label">Protocol</span>
+    <span class="x2mdx-ref-meta-value">gRPC</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Service</dt>
-    <dd>CommandService</dd>
+    <span class="x2mdx-ref-meta-label">Service</span>
+    <span class="x2mdx-ref-meta-value">CommandService</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>RPC</dt>
-    <dd>SubmitAndWaitForReassignment</dd>
+    <span class="x2mdx-ref-meta-label">RPC</span>
+    <span class="x2mdx-ref-meta-value">SubmitAndWaitForReassignment</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Client stream</dt>
-    <dd>No</dd>
+    <span class="x2mdx-ref-meta-label">Client stream</span>
+    <span class="x2mdx-ref-meta-value">No</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Server stream</dt>
-    <dd>No</dd>
+    <span class="x2mdx-ref-meta-label">Server stream</span>
+    <span class="x2mdx-ref-meta-value">No</span>
   </div>
 
-</dl>
+</div>
 
 
 ## Inputs
@@ -111,19 +111,19 @@ title: "SubmitAndWaitForReassignment"
 
 
 
-<dl class="x2mdx-ref-meta-grid">
+<div class="x2mdx-ref-meta-grid">
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Message</dt>
-    <dd>com.daml.ledger.api.v2.SubmitAndWaitForReassignmentRequest</dd>
+    <span class="x2mdx-ref-meta-label">Message</span>
+    <span class="x2mdx-ref-meta-value">com.daml.ledger.api.v2.SubmitAndWaitForReassignmentRequest</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Client stream</dt>
-    <dd>No</dd>
+    <span class="x2mdx-ref-meta-label">Client stream</span>
+    <span class="x2mdx-ref-meta-value">No</span>
   </div>
 
-</dl>
+</div>
 
 
 
@@ -174,19 +174,19 @@ title: "SubmitAndWaitForReassignment"
 
 
 
-<dl class="x2mdx-ref-meta-grid">
+<div class="x2mdx-ref-meta-grid">
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Message</dt>
-    <dd>com.daml.ledger.api.v2.SubmitAndWaitForReassignmentResponse</dd>
+    <span class="x2mdx-ref-meta-label">Message</span>
+    <span class="x2mdx-ref-meta-value">com.daml.ledger.api.v2.SubmitAndWaitForReassignmentResponse</span>
   </div>
 
   <div class="x2mdx-ref-meta-item">
-    <dt>Server stream</dt>
-    <dd>No</dd>
+    <span class="x2mdx-ref-meta-label">Server stream</span>
+    <span class="x2mdx-ref-meta-value">No</span>
   </div>
 
-</dl>
+</div>
 
 
 
@@ -388,6 +388,24 @@ title: "SubmitAndWaitForReassignment"
   <div class="x2mdx-ref-field-row">
     <div class="x2mdx-ref-field-main">
       <code class="x2mdx-ref-field-name">target</code>
+      <span class="x2mdx-ref-type-badge">string</span>
+
+    </div>
+
+  </div>
+
+  <div class="x2mdx-ref-field-row">
+    <div class="x2mdx-ref-field-main">
+      <code class="x2mdx-ref-field-name">override_source_validation_package_id</code>
+      <span class="x2mdx-ref-type-badge">string</span>
+
+    </div>
+
+  </div>
+
+  <div class="x2mdx-ref-field-row">
+    <div class="x2mdx-ref-field-main">
+      <code class="x2mdx-ref-field-name">override_target_validation_package_id</code>
       <span class="x2mdx-ref-type-badge">string</span>
 
     </div>
@@ -1775,7 +1793,9 @@ grpcurl \
         "unassignCommand": {
           "contractId": "string",
           "source": "string",
-          "target": "string"
+          "target": "string",
+          "overrideSourceValidationPackageId": "string",
+          "overrideTargetValidationPackageId": "string"
         }
       }
     ]

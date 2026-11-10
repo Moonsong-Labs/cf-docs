@@ -5,9 +5,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/configure/project-structure-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 182,
-        "end": 184
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-project-structure-health-check-admin-ports-start",
+        "end": "cf-docs-snippet-cn-quickstart-project-structure-health-check-admin-ports-end"
       },
       "description": "",
       "options": {
@@ -20,9 +20,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/configure/project-structure-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 356,
-        "end": 361
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-project-structure-quick-start-commands-start",
+        "end": "cf-docs-snippet-cn-quickstart-project-structure-quick-start-commands-end"
       },
       "description": "",
       "options": {
@@ -35,9 +35,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/configure/project-structure-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 367,
-        "end": 371
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-project-structure-iterative-development-commands-start",
+        "end": "cf-docs-snippet-cn-quickstart-project-structure-iterative-development-commands-end"
       },
       "description": "",
       "options": {
@@ -50,9 +50,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/configure/project-structure-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 377,
-        "end": 379
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-project-structure-debugging-log-commands-start",
+        "end": "cf-docs-snippet-cn-quickstart-project-structure-debugging-log-commands-end"
       },
       "description": "",
       "options": {
@@ -65,9 +65,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/observe/observability-troubleshooting-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 164,
-        "end": 165
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-observability-postgres-direct-psql-start",
+        "end": "cf-docs-snippet-cn-quickstart-observability-postgres-direct-psql-end"
       },
       "description": "",
       "options": {
@@ -78,16 +78,13 @@
     {
       "snippetName": "cn-quickstart-rst-code-sdk-docs-sharable-sdk-quickstart-observe-observability-troubleshooting-overview-none-179",
       "sourceRepo": "cn-quickstart",
-      "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/observe/observability-troubleshooting-overview.rst",
+      "sourceFilepath": "quickstart/docker/backend-service/debug.yaml",
       "location": {
-        "type": "lines",
-        "start": 179,
-        "end": 190
+        "type": "fullFile"
       },
-      "description": "",
+      "description": "backend-service remote-debug overlay (debug.yaml)",
       "options": {
-        "language": "",
-        "normalizeIndent": false
+        "language": "yaml"
       }
     },
     {
@@ -95,9 +92,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/observe/observability-troubleshooting-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 271,
-        "end": 272
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-observability-create-app-install-request-command-start",
+        "end": "cf-docs-snippet-cn-quickstart-observability-create-app-install-request-command-end"
       },
       "description": "",
       "options": {
@@ -110,9 +107,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/observe/observability-troubleshooting-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 275,
-        "end": 319
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-observability-create-app-install-request-output-start",
+        "end": "cf-docs-snippet-cn-quickstart-observability-create-app-install-request-output-end"
       },
       "description": "",
       "options": {
@@ -125,9 +122,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/observe/observability-troubleshooting-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 356,
-        "end": 366
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-observability-daml-shell-transaction-lookup-start",
+        "end": "cf-docs-snippet-cn-quickstart-observability-daml-shell-transaction-lookup-end"
       },
       "description": "",
       "options": {
@@ -140,9 +137,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/observe/observability-troubleshooting-overview.rst",
       "location": {
-        "type": "lines",
-        "start": 387,
-        "end": 403
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-observability-daml-shell-contract-lookup-start",
+        "end": "cf-docs-snippet-cn-quickstart-observability-daml-shell-contract-lookup-end"
       },
       "description": "",
       "options": {
@@ -155,9 +152,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 96,
-        "end": 107
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-configure-etc-hosts-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-configure-etc-hosts-end"
       },
       "description": "",
       "options": {
@@ -170,9 +167,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 174,
-        "end": 175
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-untar-splice-node-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-untar-splice-node-end"
       },
       "description": "",
       "options": {
@@ -185,9 +182,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 233,
-        "end": 234
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-docker-compose-down-volumes-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-docker-compose-down-volumes-end"
       },
       "description": "",
       "options": {
@@ -200,9 +197,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 245,
-        "end": 251
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-retrieve-migration-id-and-version-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-retrieve-migration-id-and-version-end"
       },
       "description": "",
       "options": {
@@ -215,9 +212,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 265,
-        "end": 271
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-get-onboarding-secret-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-get-onboarding-secret-end"
       },
       "description": "",
       "options": {
@@ -230,9 +227,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 291,
-        "end": 292
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-set-party-hint-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-set-party-hint-end"
       },
       "description": "",
       "options": {
@@ -245,9 +242,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 310,
-        "end": 333
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-validator-env-authentication-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-validator-env-authentication-end"
       },
       "description": "",
       "options": {
@@ -260,9 +257,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 345,
-        "end": 352
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-start-validator-script-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-start-validator-script-end"
       },
       "description": "",
       "options": {
@@ -275,9 +272,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 390,
-        "end": 393
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-cd-devnet-compose-dir-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-cd-devnet-compose-dir-end"
       },
       "description": "",
       "options": {
@@ -290,9 +287,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 396,
-        "end": 405
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-devnet-compose-up-output-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-devnet-compose-up-output-end"
       },
       "description": "",
       "options": {
@@ -305,9 +302,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 424,
-        "end": 425
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-return-to-quickstart-dir-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-return-to-quickstart-dir-end"
       },
       "description": "",
       "options": {
@@ -320,9 +317,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 430,
-        "end": 431
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-make-build-daml-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-make-build-daml-end"
       },
       "description": "",
       "options": {
@@ -335,9 +332,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 436,
-        "end": 437
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-verify-dar-exists-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-verify-dar-exists-end"
       },
       "description": "",
       "options": {
@@ -350,9 +347,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 442,
-        "end": 443
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-verify-dar-exists-output-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-verify-dar-exists-output-end"
       },
       "description": "",
       "options": {
@@ -365,9 +362,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 451,
-        "end": 455
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-dar-upload-get-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-dar-upload-get-token-end"
       },
       "description": "",
       "options": {
@@ -380,9 +377,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 465,
-        "end": 469
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-dar-upload-macos-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-dar-upload-macos-end"
       },
       "description": "",
       "options": {
@@ -395,9 +392,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 475,
-        "end": 479
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-dar-upload-linux-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-dar-upload-linux-end"
       },
       "description": "",
       "options": {
@@ -410,9 +407,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 489,
-        "end": 490
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-make-build-backend-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-make-build-backend-end"
       },
       "description": "",
       "options": {
@@ -425,9 +422,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 503,
-        "end": 504
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-make-build-frontend-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-make-build-frontend-end"
       },
       "description": "",
       "options": {
@@ -440,9 +437,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 509,
-        "end": 510
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-make-vite-dev-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-make-vite-dev-end"
       },
       "description": "",
       "options": {
@@ -455,9 +452,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 569,
-        "end": 570
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-health-check-docker-ps-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-health-check-docker-ps-end"
       },
       "description": "",
       "options": {
@@ -470,9 +467,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 577,
-        "end": 581
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-health-check-get-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-health-check-get-token-end"
       },
       "description": "",
       "options": {
@@ -485,9 +482,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 586,
-        "end": 587
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-health-check-call-service-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-health-check-call-service-end"
       },
       "description": "",
       "options": {
@@ -500,9 +497,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 595,
-        "end": 596
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-super-validator-connectivity-check-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-super-validator-connectivity-check-end"
       },
       "description": "",
       "options": {
@@ -515,9 +512,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 607,
-        "end": 612
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-view-validator-tables-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-view-validator-tables-end"
       },
       "description": "",
       "options": {
@@ -530,9 +527,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 618,
-        "end": 619
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-confirm-migration-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-confirm-migration-id-end"
       },
       "description": "",
       "options": {
@@ -545,9 +542,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 625,
-        "end": 626
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-find-dso-fingerprint-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-find-dso-fingerprint-end"
       },
       "description": "",
       "options": {
@@ -560,9 +557,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 635,
-        "end": 636
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-read-docker-logs-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-read-docker-logs-end"
       },
       "description": "",
       "options": {
@@ -575,9 +572,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 642,
-        "end": 643
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-docker-kill-all-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-docker-kill-all-end"
       },
       "description": "",
       "options": {
@@ -590,9 +587,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 649,
-        "end": 650
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-docker-stop-all-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-docker-stop-all-end"
       },
       "description": "",
       "options": {
@@ -605,9 +602,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 659,
-        "end": 660
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-docker-rm-all-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-docker-rm-all-end"
       },
       "description": "",
       "options": {
@@ -620,9 +617,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 666,
-        "end": 667
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-docker-stop-and-rm-all-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-docker-stop-and-rm-all-end"
       },
       "description": "",
       "options": {
@@ -635,9 +632,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 689,
-        "end": 709
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-vmnetd-nginx-compose-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-vmnetd-nginx-compose-end"
       },
       "description": "",
       "options": {
@@ -650,9 +647,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 728,
-        "end": 729
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-ping-app-provider-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-ping-app-provider-end"
       },
       "description": "",
       "options": {
@@ -665,9 +662,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 737,
-        "end": 738
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-backend-service-logs-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-backend-service-logs-end"
       },
       "description": "",
       "options": {
@@ -680,9 +677,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 744,
-        "end": 745
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-find-login-links-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-find-login-links-end"
       },
       "description": "",
       "options": {
@@ -695,9 +692,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 761,
-        "end": 762
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-verify-token-length-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-verify-token-length-end"
       },
       "description": "",
       "options": {
@@ -710,9 +707,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 770,
-        "end": 771
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-pqs-query-app-install-requests-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-pqs-query-app-install-requests-end"
       },
       "description": "",
       "options": {
@@ -725,9 +722,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 776,
-        "end": 777
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-pqs-query-licenses-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-pqs-query-licenses-end"
       },
       "description": "",
       "options": {
@@ -740,9 +737,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 785,
-        "end": 786
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-port-in-use-lsof-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-port-in-use-lsof-end"
       },
       "description": "",
       "options": {
@@ -755,9 +752,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 789,
-        "end": 791
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-port-in-use-lsof-output-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-port-in-use-lsof-output-end"
       },
       "description": "",
       "options": {
@@ -770,9 +767,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 794,
-        "end": 795
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-port-in-use-kill-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-port-in-use-kill-end"
       },
       "description": "",
       "options": {
@@ -785,9 +782,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 805,
-        "end": 806
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-unhealthy-validator-down-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-unhealthy-validator-down-end"
       },
       "description": "",
       "options": {
@@ -800,9 +797,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 811,
-        "end": 812
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-unhealthy-validator-up-capture-logs-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-unhealthy-validator-up-capture-logs-end"
       },
       "description": "",
       "options": {
@@ -815,9 +812,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 817,
-        "end": 818
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-unhealthy-validator-read-logs-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-unhealthy-validator-read-logs-end"
       },
       "description": "",
       "options": {
@@ -830,9 +827,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 837,
-        "end": 838
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-keycloak-logs-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-keycloak-logs-end"
       },
       "description": "",
       "options": {
@@ -845,9 +842,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 843,
-        "end": 844
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-keycloak-postgres-logs-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-keycloak-postgres-logs-end"
       },
       "description": "",
       "options": {
@@ -860,9 +857,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 849,
-        "end": 850
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-keycloak-oidc-discovery-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-keycloak-oidc-discovery-end"
       },
       "description": "",
       "options": {
@@ -875,9 +872,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 855,
-        "end": 861
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-keycloak-app-provider-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-keycloak-app-provider-token-end"
       },
       "description": "",
       "options": {
@@ -890,9 +887,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 866,
-        "end": 872
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-keycloak-app-user-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-keycloak-app-user-token-end"
       },
       "description": "",
       "options": {
@@ -905,9 +902,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 877,
-        "end": 878
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-keycloak-public-key-location-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-keycloak-public-key-location-end"
       },
       "description": "",
       "options": {
@@ -920,9 +917,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 886,
-        "end": 887
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-keycloak-admin-ssl-logs-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-keycloak-admin-ssl-logs-end"
       },
       "description": "",
       "options": {
@@ -935,9 +932,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 892,
-        "end": 897
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-keycloak-admin-disable-ssl-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-keycloak-admin-disable-ssl-end"
       },
       "description": "",
       "options": {
@@ -950,9 +947,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 905,
-        "end": 906
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-env-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-env-end"
       },
       "description": "",
       "options": {
@@ -965,9 +962,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 911,
-        "end": 915
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-restart-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-restart-end"
       },
       "description": "",
       "options": {
@@ -980,9 +977,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 920,
-        "end": 921
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-logs-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-logs-end"
       },
       "description": "",
       "options": {
@@ -995,9 +992,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 926,
-        "end": 927
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-networks-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-networks-end"
       },
       "description": "",
       "options": {
@@ -1010,9 +1007,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 932,
-        "end": 933
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-validator-nginx-container-names-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-validator-nginx-container-names-end"
       },
       "description": "",
       "options": {
@@ -1025,9 +1022,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 938,
-        "end": 940
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-validator-nginx-networks-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-validator-nginx-networks-end"
       },
       "description": "",
       "options": {
@@ -1040,9 +1037,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 945,
-        "end": 946
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-initialized-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-initialized-end"
       },
       "description": "",
       "options": {
@@ -1055,9 +1052,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/deploy-quickstart-to-devnet.rst",
       "location": {
-        "type": "lines",
-        "start": 954,
-        "end": 963
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-connection-error-output-start",
+        "end": "cf-docs-snippet-cn-quickstart-devnet-splice-onboarding-connection-error-output-end"
       },
       "description": "",
       "options": {
@@ -1070,9 +1067,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/explore-the-demo.rst",
       "location": {
-        "type": "lines",
-        "start": 104,
-        "end": 105
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-explore-demo-make-build-and-start-start",
+        "end": "cf-docs-snippet-cn-quickstart-explore-demo-make-build-and-start-end"
       },
       "description": "",
       "options": {
@@ -1085,9 +1082,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 37,
-        "end": 49
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-localnet-setup-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-localnet-setup-end"
       },
       "description": "",
       "options": {
@@ -1100,9 +1097,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 54,
-        "end": 58
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-env-local-example-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-env-local-example-end"
       },
       "description": "",
       "options": {
@@ -1115,9 +1112,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 67,
-        "end": 71
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-admin-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-admin-token-end"
       },
       "description": "",
       "options": {
@@ -1130,9 +1127,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 79,
-        "end": 85
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-generate-ed25519-keys-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-generate-ed25519-keys-end"
       },
       "description": "",
       "options": {
@@ -1145,9 +1142,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 96,
-        "end": 98
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-party-hint-from-env-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-party-hint-from-env-end"
       },
       "description": "",
       "options": {
@@ -1160,9 +1157,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 103,
-        "end": 112
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-generate-topology-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-generate-topology-request-end"
       },
       "description": "",
       "options": {
@@ -1175,9 +1172,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 117,
-        "end": 134
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-generate-topology-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-generate-topology-response-end"
       },
       "description": "",
       "options": {
@@ -1190,9 +1187,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 156,
-        "end": 178
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-extract-topology-fields-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-extract-topology-fields-end"
       },
       "description": "",
       "options": {
@@ -1205,9 +1202,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 185,
-        "end": 199
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-sign-topology-hashes-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-sign-topology-hashes-end"
       },
       "description": "",
       "options": {
@@ -1220,9 +1217,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 212,
-        "end": 232
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-submit-topology-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-submit-topology-request-end"
       },
       "description": "",
       "options": {
@@ -1235,9 +1232,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 237,
-        "end": 240
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-submit-topology-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-submit-topology-response-end"
       },
       "description": "",
       "options": {
@@ -1250,9 +1247,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 250,
-        "end": 252
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-ledger-api-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-ledger-api-token-end"
       },
       "description": "",
       "options": {
@@ -1265,9 +1262,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 255,
-        "end": 258
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-query-parties-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-query-parties-end"
       },
       "description": "",
       "options": {
@@ -1280,9 +1277,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 265,
-        "end": 270
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-get-synchronizer-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-get-synchronizer-id-end"
       },
       "description": "",
       "options": {
@@ -1295,9 +1292,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 275,
-        "end": 285
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-list-party-to-participant-mappings-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-list-party-to-participant-mappings-end"
       },
       "description": "",
       "options": {
@@ -1310,9 +1307,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 317,
-        "end": 322
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-get-responder-party-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-get-responder-party-end"
       },
       "description": "",
       "options": {
@@ -1325,9 +1322,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 327,
-        "end": 355
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-prepare-ping-submission-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-prepare-ping-submission-end"
       },
       "description": "",
       "options": {
@@ -1340,9 +1337,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 367,
-        "end": 369
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-list-deployed-packages-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-list-deployed-packages-end"
       },
       "description": "",
       "options": {
@@ -1355,9 +1352,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 380,
-        "end": 382
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-extract-prepared-transaction-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-extract-prepared-transaction-end"
       },
       "description": "",
       "options": {
@@ -1370,9 +1367,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 392,
-        "end": 393
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-inspect-prepared-transaction-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-inspect-prepared-transaction-end"
       },
       "description": "",
       "options": {
@@ -1385,9 +1382,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 408,
-        "end": 413
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-sign-prepared-transaction-hash-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-sign-prepared-transaction-hash-end"
       },
       "description": "",
       "options": {
@@ -1400,9 +1397,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 423,
-        "end": 449
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-execute-submission-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-execute-submission-end"
       },
       "description": "",
       "options": {
@@ -1415,9 +1412,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 470,
-        "end": 476
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-stream-completions-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-stream-completions-end"
       },
       "description": "",
       "options": {
@@ -1430,9 +1427,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 482,
-        "end": 485
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-inspect-completion-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-inspect-completion-end"
       },
       "description": "",
       "options": {
@@ -1445,9 +1442,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 488,
-        "end": 496
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-completion-success-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-completion-success-response-end"
       },
       "description": "",
       "options": {
@@ -1460,9 +1457,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/how-to-onboard-external-parties-in-quickstart.rst",
       "location": {
-        "type": "lines",
-        "start": 503,
-        "end": 522
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-external-parties-get-transaction-updates-start",
+        "end": "cf-docs-snippet-cn-quickstart-external-parties-get-transaction-updates-end"
       },
       "description": "",
       "options": {
@@ -1471,28 +1468,13 @@
       }
     },
     {
-      "snippetName": "cn-quickstart-rst-code-sdk-docs-sharable-sdk-quickstart-operate-json-api-text-38",
-      "sourceRepo": "cn-quickstart",
-      "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
-      "location": {
-        "type": "lines",
-        "start": 38,
-        "end": 46
-      },
-      "description": "",
-      "options": {
-        "language": "text",
-        "normalizeIndent": false
-      }
-    },
-    {
       "snippetName": "cn-quickstart-rst-code-sdk-docs-sharable-sdk-quickstart-operate-json-api-bash-132",
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 132,
-        "end": 138
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-get-user-admin-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-get-user-admin-token-end"
       },
       "description": "",
       "options": {
@@ -1505,9 +1487,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 147,
-        "end": 148
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-echo-user-admin-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-echo-user-admin-token-end"
       },
       "description": "",
       "options": {
@@ -1520,9 +1502,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 156,
-        "end": 158
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-list-parties-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-list-parties-end"
       },
       "description": "",
       "options": {
@@ -1535,9 +1517,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 166,
-        "end": 167
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-app-provider-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-app-provider-end"
       },
       "description": "",
       "options": {
@@ -1550,9 +1532,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 172,
-        "end": 173
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-dso-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-dso-end"
       },
       "description": "",
       "options": {
@@ -1565,9 +1547,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 178,
-        "end": 186
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-save-app-parties-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-save-app-parties-end"
       },
       "description": "",
       "options": {
@@ -1580,9 +1562,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 192,
-        "end": 196
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-save-dso-party-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-save-dso-party-end"
       },
       "description": "",
       "options": {
@@ -1595,9 +1577,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 213,
-        "end": 219
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-create-party-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-create-party-request-end"
       },
       "description": "",
       "options": {
@@ -1610,9 +1592,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 227,
-        "end": 235
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-create-party-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-create-party-response-end"
       },
       "description": "",
       "options": {
@@ -1625,9 +1607,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 241,
-        "end": 242
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-alice-name-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-alice-name-end"
       },
       "description": "",
       "options": {
@@ -1640,9 +1622,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 247,
-        "end": 248
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-alice-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-alice-id-end"
       },
       "description": "",
       "options": {
@@ -1655,9 +1637,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 258,
-        "end": 260
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-list-parties-troubleshoot-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-list-parties-troubleshoot-end"
       },
       "description": "",
       "options": {
@@ -1670,9 +1652,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 268,
-        "end": 272
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-upload-dar-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-upload-dar-request-end"
       },
       "description": "",
       "options": {
@@ -1685,14 +1667,14 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 277,
-        "end": 278
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-upload-dar-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-upload-dar-response-end"
       },
       "description": "",
       "options": {
         "language": "json",
-        "normalizeIndent": false
+        "normalizeIndent": "baseline"
       }
     },
     {
@@ -1700,9 +1682,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 295,
-        "end": 296
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-inspect-dar-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-inspect-dar-end"
       },
       "description": "",
       "options": {
@@ -1715,9 +1697,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 315,
-        "end": 318
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-save-package-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-save-package-id-end"
       },
       "description": "",
       "options": {
@@ -1730,9 +1712,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 326,
-        "end": 327
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-package-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-package-id-end"
       },
       "description": "",
       "options": {
@@ -1745,9 +1727,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 335,
-        "end": 341
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-renew-user-admin-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-renew-user-admin-token-end"
       },
       "description": "",
       "options": {
@@ -1760,9 +1742,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 347,
-        "end": 353
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-get-provider-admin-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-get-provider-admin-token-end"
       },
       "description": "",
       "options": {
@@ -1775,9 +1757,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 358,
-        "end": 365
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-get-user-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-get-user-token-end"
       },
       "description": "",
       "options": {
@@ -1790,9 +1772,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 370,
-        "end": 395
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-create-app-install-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-create-app-install-request-end"
       },
       "description": "",
       "options": {
@@ -1805,9 +1787,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 402,
-        "end": 406
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-create-app-install-request-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-create-app-install-request-response-end"
       },
       "description": "",
       "options": {
@@ -1820,9 +1802,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 415,
-        "end": 416
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-app-install-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-app-install-request-end"
       },
       "description": "",
       "options": {
@@ -1835,9 +1817,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 434,
-        "end": 435
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-app-install-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-app-install-request-end"
       },
       "description": "",
       "options": {
@@ -1850,9 +1832,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 452,
-        "end": 453
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-save-install-request-cid-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-save-install-request-cid-end"
       },
       "description": "",
       "options": {
@@ -1865,9 +1847,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 461,
-        "end": 468
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-get-provider-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-get-provider-token-end"
       },
       "description": "",
       "options": {
@@ -1880,9 +1862,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 473,
-        "end": 503
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-accept-app-install-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-accept-app-install-request-end"
       },
       "description": "",
       "options": {
@@ -1895,14 +1877,14 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 504,
-        "end": 504
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-accept-app-install-request-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-accept-app-install-request-response-end"
       },
       "description": "Accept choice success line (json-api.rst)",
       "options": {
-        "language": "text",
-        "normalizeIndent": false
+        "language": "json",
+        "normalizeIndent": "baseline"
       }
     },
     {
@@ -1910,9 +1892,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 511,
-        "end": 512
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-app-install-request-lowercase-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-app-install-request-lowercase-end"
       },
       "description": "",
       "options": {
@@ -1925,9 +1907,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 521,
-        "end": 527
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-generate-provider-admin-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-generate-provider-admin-token-end"
       },
       "description": "",
       "options": {
@@ -1940,9 +1922,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 532,
-        "end": 534
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-check-app-provider-user-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-check-app-provider-user-end"
       },
       "description": "",
       "options": {
@@ -1955,9 +1937,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 539,
-        "end": 544
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-get-app-provider-party-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-get-app-provider-party-end"
       },
       "description": "",
       "options": {
@@ -1970,9 +1952,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 552,
-        "end": 553
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-app-install-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-app-install-end"
       },
       "description": "",
       "options": {
@@ -1985,9 +1967,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 561,
-        "end": 562
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-save-app-install-cid-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-save-app-install-cid-end"
       },
       "description": "",
       "options": {
@@ -2000,9 +1982,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 567,
-        "end": 574
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-verify-variables-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-verify-variables-end"
       },
       "description": "",
       "options": {
@@ -2015,9 +1997,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 580,
-        "end": 582
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-check-provider-token-valid-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-check-provider-token-valid-end"
       },
       "description": "",
       "options": {
@@ -2030,9 +2012,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 589,
-        "end": 591
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-check-provider-token-invalid-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-check-provider-token-invalid-end"
       },
       "description": "",
       "options": {
@@ -2045,9 +2027,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 609,
-        "end": 640
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-create-license-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-create-license-end"
       },
       "description": "",
       "options": {
@@ -2060,9 +2042,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 645,
-        "end": 646
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-create-license-contract-not-found-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-create-license-contract-not-found-end"
       },
       "description": "",
       "options": {
@@ -2075,9 +2057,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 651,
-        "end": 652
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-create-license-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-create-license-response-end"
       },
       "description": "",
       "options": {
@@ -2090,9 +2072,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 658,
-        "end": 659
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-app-install-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-lnav-filter-app-install-end"
       },
       "description": "",
       "options": {
@@ -2105,9 +2087,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 667,
-        "end": 668
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-license-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-license-end"
       },
       "description": "",
       "options": {
@@ -2120,9 +2102,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 673,
-        "end": 674
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-contract-license-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-contract-license-end"
       },
       "description": "",
       "options": {
@@ -2135,9 +2117,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 680,
-        "end": 681
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-save-license-cid-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-save-license-cid-end"
       },
       "description": "",
       "options": {
@@ -2150,9 +2132,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 687,
-        "end": 691
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-generate-renewal-request-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-generate-renewal-request-id-end"
       },
       "description": "",
       "options": {
@@ -2165,9 +2147,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 697,
-        "end": 699
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-set-license-extension-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-set-license-extension-end"
       },
       "description": "",
       "options": {
@@ -2180,9 +2162,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 722,
-        "end": 723
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-set-command-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-set-command-id-end"
       },
       "description": "",
       "options": {
@@ -2195,9 +2177,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 728,
-        "end": 769
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-request-license-renewal-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-request-license-renewal-end"
       },
       "description": "",
       "options": {
@@ -2210,14 +2192,14 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 770,
-        "end": 770
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-request-license-renewal-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-request-license-renewal-response-end"
       },
       "description": "License renew success line (json-api.rst)",
       "options": {
-        "language": "text",
-        "normalizeIndent": false
+        "language": "json",
+        "normalizeIndent": "baseline"
       }
     },
     {
@@ -2225,9 +2207,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 779,
-        "end": 780
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-renewal-request-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-renewal-request-end"
       },
       "description": "",
       "options": {
@@ -2240,9 +2222,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 797,
-        "end": 798
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-save-renewal-request-cid-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-save-renewal-request-cid-end"
       },
       "description": "",
       "options": {
@@ -2255,9 +2237,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 808,
-        "end": 809
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-holdings-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-holdings-end"
       },
       "description": "",
       "options": {
@@ -2270,9 +2252,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 908,
-        "end": 909
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-allocations-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-daml-shell-active-allocations-end"
       },
       "description": "",
       "options": {
@@ -2285,9 +2267,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 917,
-        "end": 927
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-verify-renewal-variables-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-verify-renewal-variables-end"
       },
       "description": "",
       "options": {
@@ -2300,9 +2282,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 933,
-        "end": 940
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-renew-provider-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-renew-provider-token-end"
       },
       "description": "",
       "options": {
@@ -2315,9 +2297,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 946,
-        "end": 947
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-generate-complete-renewal-command-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-generate-complete-renewal-command-id-end"
       },
       "description": "",
       "options": {
@@ -2330,9 +2312,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 956,
-        "end": 957
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-set-complete-renewal-endpoint-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-set-complete-renewal-endpoint-end"
       },
       "description": "",
       "options": {
@@ -2345,9 +2327,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 963,
-        "end": 970
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-set-complete-renewal-request-body-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-set-complete-renewal-request-body-end"
       },
       "description": "",
       "options": {
@@ -2360,9 +2342,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 976,
-        "end": 983
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-complete-license-renewal-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-complete-license-renewal-end"
       },
       "description": "",
       "options": {
@@ -2375,9 +2357,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 988,
-        "end": 991
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-complete-license-renewal-response-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-complete-license-renewal-response-end"
       },
       "description": "",
       "options": {
@@ -2390,9 +2372,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 1012,
-        "end": 1092
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-user-token-and-ids-cookbook-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-user-token-and-ids-cookbook-end"
       },
       "description": "",
       "options": {
@@ -2405,9 +2387,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 1122,
-        "end": 1124
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-access-admin-ports-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-access-admin-ports-end"
       },
       "description": "",
       "options": {
@@ -2420,9 +2402,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 1130,
-        "end": 1132
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-show-token-ledger-api-claims-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-show-token-ledger-api-claims-end"
       },
       "description": "",
       "options": {
@@ -2435,9 +2417,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 1140,
-        "end": 1147
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-discover-ids-admin-token-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-discover-ids-admin-token-end"
       },
       "description": "",
       "options": {
@@ -2450,9 +2432,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 1150,
-        "end": 1153
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-discover-ids-list-users-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-discover-ids-list-users-end"
       },
       "description": "",
       "options": {
@@ -2465,9 +2447,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 1156,
-        "end": 1159
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-discover-ids-extract-user-id-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-discover-ids-extract-user-id-end"
       },
       "description": "",
       "options": {
@@ -2480,9 +2462,9 @@
       "sourceRepo": "cn-quickstart",
       "sourceFilepath": "sdk/docs/sharable/sdk/quickstart/operate/json-api.rst",
       "location": {
-        "type": "lines",
-        "start": 1162,
-        "end": 1164
+        "type": "stringMarker",
+        "start": "cf-docs-snippet-cn-quickstart-json-api-discover-ids-get-party-start",
+        "end": "cf-docs-snippet-cn-quickstart-json-api-discover-ids-get-party-end"
       },
       "description": "",
       "options": {

@@ -12,11 +12,12 @@ from pathlib import Path
 from x2mdx.cli import main as cli_main
 from x2mdx.jvm_docs.lifecycle import (
     build_jvm_doc_lifecycle_report_from_sources,
+    deprecated_refs_from_java_html,
     parse_java_type_page,
     parse_scala_type_page,
 )
 from x2mdx.jvm_docs.models import JvmDocArtifactLifecycle, JvmDocLifecycleReport, JvmDocSymbolLifecycle
-from x2mdx.jvm_docs.render import build_pages, current_member_rows
+from x2mdx.jvm_docs.render import build_pages, retained_member_rows
 from x2mdx.render import render_page
 from x2mdx.jvm_docs.snapshots import load_jvm_doc_sources
 
@@ -370,6 +371,24 @@ class JvmDocsTests(unittest.TestCase):
             object_text,
         )
 
+    def test_deprecated_list_notes_parse_from_javadoc_17_and_25_markup(self) -> None:
+        javadoc_17 = """
+            <div class="col-summary-item-name even-row-color"><a href="com/example/Foo.html#oldMethod()">oldMethod</a></div>
+            <div class="col-last even-row-color"><div class="deprecation-comment">since 1.1.0 use newMethod()</div></div>
+        """
+        javadoc_25 = """
+            <div class="col-summary-item-name even-row-color"><a href="com/example/Foo.html#oldMethod()">oldMethod</a></div>
+            <div class="col-last even-row-color">
+            <div class="block">since 1.1.0 use newMethod()</div>
+            </div>
+        """
+
+        for html in (javadoc_17, javadoc_25):
+            self.assertEqual(
+                deprecated_refs_from_java_html(html)["com/example/Foo.html#oldMethod()"],
+                "since 1.1.0 use newMethod()",
+            )
+
     def test_java_meta_description_fallback_ignores_declaration_text(self) -> None:
         _, summary = parse_java_type_page(
             """
@@ -571,7 +590,7 @@ class JvmDocsTests(unittest.TestCase):
         legacy = next(item for item in payload["items"] if item["location"] == "com.example.Legacy")
         self.assertFalse(legacy["current_present"])
         self.assertEqual(legacy["observed_removal"], "1.1.0")
-        self.assertIsNone(legacy.get("route"))
+        self.assertIsNotNone(legacy.get("route"))
 
         artifact_page = details_dir / "bindings-java.mdx"
         package_dir = details_dir / "bindings-java-packages" / "com-example"
@@ -584,7 +603,8 @@ class JvmDocsTests(unittest.TestCase):
         self.assertTrue(package_page.exists())
         self.assertTrue(foo_page.exists())
         self.assertTrue(bar_page.exists())
-        self.assertFalse(legacy_page.exists())
+        self.assertTrue(legacy_page.exists())
+        self.assertIn("Removed in 1.1.0", legacy_page.read_text(encoding="utf-8"))
 
         overview_text = overview.read_text(encoding="utf-8")
         foo_text = foo_page.read_text(encoding="utf-8")
@@ -627,7 +647,7 @@ class JvmDocsTests(unittest.TestCase):
             latest_doc_path="com/example/Foo.html",
         )
 
-        rows = current_member_rows(
+        rows = retained_member_rows(
             {"members": [baseline_member, added_member]},
             baseline_version="1.0.0",
             publish_version="1.2.0",

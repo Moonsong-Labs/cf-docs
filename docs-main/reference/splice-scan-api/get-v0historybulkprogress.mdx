@@ -1,0 +1,296 @@
+---
+title: "GET /v0/history/bulk/progress"
+description: "**Under Development, do not use in production yet** Query whether bulk storage object creation has advanced to a certain record time. Meant for internal use only, as part of the processing pipeline of bulk objects."
+api: "GET https://scan.sv-1.global.canton.network.sync.global/api/scan/v0/history/bulk/progress"
+playground: "interactive"
+sidebarTitle: "/v0/history/bulk/progress"
+---
+
+<div class="x2mdx-ref-page x2mdx-ref-page--operation x2mdx-ref-page--manual-api"></div>
+
+
+
+<div class="x2mdx-ref-hero">
+
+
+
+  <p class="x2mdx-ref-summary">**Under Development, do not use in production yet** Query whether bulk storage object creation has advanced to a certain record time. Meant for internal use only, as part of the processing pipeline of bulk objects.</p>
+
+
+<div class="x2mdx-ref-badges">
+
+  <span class="x2mdx-ref-badge x2mdx-ref-badge--protocol">OpenAPI</span>
+
+  <a class="x2mdx-ref-badge x2mdx-ref-badge--added" href="#history-added-0-9-0">Added 0.9.0</a>
+
+  <a class="x2mdx-ref-badge x2mdx-ref-badge--changed" href="#history-updated-0-10-0">Updated 0.10.0</a>
+
+</div>
+
+
+</div>
+
+
+
+<RequestExample>
+
+```bash cURL
+curl --request GET \
+  --url 'https://scan.sv-1.global.canton.network.sync.global/api/scan/v0/history/bulk/progress'
+```
+
+```python Python
+import json
+import requests
+
+url = "https://scan.sv-1.global.canton.network.sync.global/api/scan/v0/history/bulk/progress"
+response = requests.request("GET", url)
+
+print(response.text)
+```
+
+```javascript JavaScript
+const response = await fetch('https://scan.sv-1.global.canton.network.sync.global/api/scan/v0/history/bulk/progress', {
+  method: 'GET',
+});
+
+console.log(await response.text());
+```
+
+```php PHP
+<?php
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+    CURLOPT_URL => 'https://scan.sv-1.global.canton.network.sync.global/api/scan/v0/history/bulk/progress',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+]);
+
+$response = curl_exec($curl);
+echo $response;
+```
+
+```go Go
+package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  req, _ := http.NewRequest("GET", "https://scan.sv-1.global.canton.network.sync.global/api/scan/v0/history/bulk/progress", nil)
+  response, _ := http.DefaultClient.Do(req)
+  defer response.Body.Close()
+  body, _ := io.ReadAll(response.Body)
+  fmt.Println(string(body))
+}
+```
+
+```java Java
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+var request = HttpRequest.newBuilder()
+    .uri(URI.create("https://scan.sv-1.global.canton.network.sync.global/api/scan/v0/history/bulk/progress"))
+    .method("GET", HttpRequest.BodyPublishers.noBody())
+    .build();
+var response = HttpClient.newHttpClient().send(
+    request, HttpResponse.BodyHandlers.ofString());
+System.out.println(response.body());
+```
+
+```ruby Ruby
+require 'net/http'
+require 'uri'
+
+uri = URI('https://scan.sv-1.global.canton.network.sync.global/api/scan/v0/history/bulk/progress')
+request = Net::HTTP::Get.new(uri)
+response = Net::HTTP.start(uri.hostname, uri.port) do |http|
+  http.request(request)
+end
+puts response.body
+```
+
+</RequestExample>
+
+
+<ResponseExample>
+
+```json 200
+{
+  "availability": "available"
+}
+```
+
+```json 501
+{
+  "error": "<string>"
+}
+```
+
+</ResponseExample>
+
+
+
+## Query parameters
+
+
+
+
+
+
+
+
+<ParamField query="record_time" type="string" required>
+OpenAPI type: <code>string (date-time)</code>.
+
+
+
+
+
+
+
+
+</ParamField>
+
+
+
+<ParamField query="bucket" type="object" required>
+OpenAPI type: <code>BulkStorageBucket</code>.
+
+
+
+The bulk storage bucket a progress query refers to: &quot;staging&quot; holds the objects this Scan has written or copied but not yet verified against its peers, &quot;committed&quot; the objects that passed that check.
+
+
+Allowed values: <code>staging</code>, <code>committed</code>.
+
+
+
+
+
+</ParamField>
+
+
+
+<ParamField query="kind" type="object">
+OpenAPI type: <code>BulkObjectKind</code>.
+
+
+
+The kind of bulk storage objects a progress query refers to: &quot;updates&quot; for update segments, &quot;snapshots&quot; for ACS snapshots. Without a kind, the query refers to both.
+
+
+Allowed values: <code>updates</code>, <code>snapshots</code>.
+
+
+
+
+
+</ParamField>
+
+
+
+
+
+
+
+## Responses
+
+
+### 200
+
+ok
+
+
+
+<div class="x2mdx-ref-badges">
+
+  <span class="x2mdx-ref-badge x2mdx-ref-badge--neutral">application/json</span>
+
+</div>
+
+
+
+
+
+
+<ResponseField name="availability" type="BulkObjectsAvailability" required>
+
+Whether the requested bucket of this Scan holds all bulk storage objects of the requested kind (update segments, ACS snapshots, or both when no kind is given) up to the requested record time. &quot;available&quot;: it does. &quot;processing&quot;: it does not yet. The record time lies within this Scan&#x27;s own history, so it produces the objects itself from its own data; they appear once its dump (staging) or its check against the peers (committed) has reached the record time. &quot;backfilling&quot;: it does not, and will not produce them itself, because the record time lies before this Scan&#x27;s own history (it joined after the network started). It copies these objects from its peers instead, and answers &quot;available&quot; once that copy has reached the record time.
+
+
+Allowed values: <code>available</code>, <code>processing</code>, <code>backfilling</code>.
+
+
+
+
+
+</ResponseField>
+
+
+
+
+
+
+### 501
+
+not implemented
+
+
+
+<div class="x2mdx-ref-badges">
+
+  <span class="x2mdx-ref-badge x2mdx-ref-badge--neutral">application/json</span>
+
+</div>
+
+
+
+
+
+
+<ResponseField name="error" type="string" required>
+
+
+
+
+
+
+</ResponseField>
+
+
+
+
+
+
+
+
+## History
+
+<div class="x2mdx-ref-history" aria-label="Reference history">
+
+  <div class="x2mdx-ref-history-event x2mdx-ref-history-event--changed" id="history-updated-0-10-0">
+    <div class="x2mdx-ref-history-event-head">
+      <span class="x2mdx-ref-history-event-label">Updated</span>
+      <code class="x2mdx-ref-history-event-version">0.10.0</code>
+    </div>
+
+    <p class="x2mdx-ref-history-event-detail">The GET /v0/history/bulk/progress operation changed in this snapshot.</p>
+
+  </div>
+
+  <div class="x2mdx-ref-history-event x2mdx-ref-history-event--introduced" id="history-added-0-9-0">
+    <div class="x2mdx-ref-history-event-head">
+      <span class="x2mdx-ref-history-event-label">Added</span>
+      <code class="x2mdx-ref-history-event-version">0.9.0</code>
+    </div>
+
+  </div>
+
+</div>
